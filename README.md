@@ -1,0 +1,1 @@
+These projects reflect my learning journey and passion for software development. Each one has helped me strengthen my skills in programming, web development, databases, and problem-solving. They demonstrate my ability to apply theoretical knowledge to real-world challenges through hands-on experience.
