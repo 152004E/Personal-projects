@@ -1,0 +1,71 @@
+body {
+  background-color: #536fc9;
+  font-family: sans-serif;
+}
+.container {
+  padding: 10px;
+  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  align-items: center;
+  width: 60%;
+  height: 80vh;
+  gap: 10px;
+}
+.materias {
+  display: flex;
+    flex-direction: column;
+  width: 80%;
+  background-color: aliceblue;
+  padding: 15px;
+  font-size: 19px;
+  border-radius: 12px;
+  gap: 10px;
+}
+
+.materia {
+  gap: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding: 15px;
+  background-color: rgb(247, 247, 247);
+  border-bottom: 1px solid black;
+  border-radius: 12px;
+}
+
+.materia div {
+  padding: 10px;
+}
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background-color: #ddd;
+  flex-grow: 1;
+  transition: all 0.6s ease;
+}
+.name:hover {
+  background-color: #b0b0b0;
+  color: #fff;
+}
+
+.nota {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  flex-basis: 20px;
+  background-color: #ddd;
+  color: #020202;
+  padding: 10px;
+  transition: all 0.6s ease;
+  font-weight: bold;
+}
+.nota:hover {
+  background-color: #b0b0b0;
+  color: #fff;
+}
