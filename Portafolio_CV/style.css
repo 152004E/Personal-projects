@@ -1,0 +1,93 @@
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.fondo {
+  background: linear-gradient(
+      to bottom right,
+      rgba(13, 110, 253, 1) 0%,
+      rgba(255, 255, 255, 1) 50%,
+      rgb(41, 72, 156) 100%
+    ),
+    url(images/portada-fondo.png) center center no-repeat;
+
+  background-position: cover;
+  height: 100%;
+}
+.imagen-cv {
+  width: 200px;
+}
+.b-div {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  padding: 0px;
+}
+
+.botones {
+  bottom: 98px;
+  left: 55px;
+}
+.traPB {
+  transition: all 1s;
+}
+.traPB:hover {
+  border: black solid 1px;
+  background-color: rgb(0, 9, 22);
+}
+
+.traCB {
+  transition: color 3s;
+  transition: background-color 1s;
+}
+.traCB:hover {
+  background-color: rgb(13, 110, 253);
+}
+.tra {
+  transition: color 0.7s;
+  border-radius: 50%;
+}
+.hover:hover {
+  color: blue;
+}
+.section-info {
+  bottom: -90px;
+  width: 75%;
+}
+
+.text-bg-light {
+  transition: all 0.7s;
+}
+.text-bg-light:hover {
+  transform: scale(1.05);
+}
+.text-bg-primary {
+  transition: all 0.7s;
+}
+.text-bg-primary:hover {
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 991px) {
+  .section-info{
+bottom: -200px;
+  }
+  .container{
+    max-width: 900px;
+  }
+  .fondo{
+    height: 150vh;
+  }
+}
+@media (max-width: 767px) {
+  .section-info{
+bottom: -350px;
+  }
+  .container{
+    max-width: 900px;
+  }
+  .fondo{
+    height: 170vh;
+  }
+}

@@ -1,11 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emerson Reyes || Portafolio profesional</title>
-</head>
-<body>
-    
-</body>
+
+    <!-- instalacion bootstrap de bootstrap-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+
+    <!-- Icons de bootstrap-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Agregar el link css-->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Agregar el Favicon-->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+
+    <!-- fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="section-portada" class="section-portada">
+      <div class="container p-4">
+        <div
+          class="fondo text-center p-2 border border-2 border-primary rounded rounded-5"
+        >
+          <p class="text-primary fs-2 m-0">- Hola</p>
+          <h2 class="fw-bold">
+            Soy <span class="text-primary">Emerson</span> <br />
+            UX/UI Designer
+          </h2>
+          <!--div para hacer los laterales del cirlulo-->
+          <div
+            class="tres-flex fs-5 fst-italic d-flex justify-content-center align-items-center gap-5"
+          >
+            <div class="comillas d-none d-lg-block">
+              <i class="bi bi-quote text-primary"></i>
+              <p class="fw-bold">
+                Crear sin comprender<br />
+                es dibujar sin sentido.
+              </p>
+            </div>
+            <!-- padre del circulo-->
+            <div class="d-flex justify-content-center">
+              <!--circulo de para la imagen-->
+              <div class="b-div bg-primary position-relative">
+                <!-- Botones-->
+                <div
+                  class="botones position-absolute d-flex justify-content-center align-items-center gap-2 bg-white p-2 rounded rounded-4"
+                >
+                  <a
+                    href="#"
+                    class="traPB btn btn-primary rounded rounded-4 d-flex gap-1"
+                    >Proyectos <i class="bi bi-folder2-open"></i
+                  ></a>
+                  <a
+                    href="#"
+                    class="traCB btn btn-outline-primary rounded rounded-4 d-flex gap-1"
+                    >Contáctame<i class="bi bi-envelope-at"></i
+                  ></a>
+                </div>
+                <!--imagen-->
+                <img
+                  class="imagen-cv rounded rounded-5"
+                  src="images/imagen-generada-cv2.png"
+                  alt="Emerson reyes"
+                />
+              </div>
+            </div>
+            <!--redes solciales-->
+            <div class="comillas d-none d-lg-block p-5">
+              <p class="fw-bold">Siguéme en:</p>
+              <div
+                class="iconosS d-flex align-items-center justify-content-center gap-2 fs-2"
+              >
+                <a href="#" class="Bder text-primary"
+                  ><i class="tra bi bi-facebook hover"></i
+                ></a>
+                <a href="#" class="Bder text-danger"
+                  ><i class="tra bi bi-instagram hover"></i
+                ></a>
+                <a href="#" class="Bder text-black"
+                  ><i class="tra bi bi-twitter-x hover"></i
+                ></a>
+              </div>
+            </div>
+            <!--Experiencia-->
+            <section class="section-info  position-absolute" id="section-info">
+            <div class="container">
+              <div class="row bg-black p-4 rounded-4 row-gap-2">
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="text-bg-primary rounded-4 p-1 h-100">
+                    <h3 class="fs-1 fw-bolder">70+</h3>
+                    <p>Proyectos realizados en diseño gráfico, identidad visual, diseño web y UX/UI</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg">
+                  <div class="text-bg-light rounded-4 p-1 h-100">
+                    <h3 class="fs-1 fw-bolder">12+</h3>
+                    <p>Años de Experiencia</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg">
+                  <div class="text-bg-light rounded-4 p-1 h-100">
+                    <h3 class="fs-1 fw-bolder">12</h3>
+                    <p>Premios y menciones</p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg">
+                  <div class="text-bg-light rounded-4 p-1 h-100">
+                    <h3 class="fs-1 fw-bolder">5+</h3>
+                    <p>Proyectos freelance a nivel nacional</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
