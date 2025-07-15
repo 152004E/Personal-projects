@@ -14,8 +14,8 @@ body {
   height: 100%;
 }
 .imagen-cv {
-  padding-top: 60px;
-  width: 200px;
+  padding-top: 45px;
+  width: 300px;
 }
 .b-div {
   border: 1px solid black;
@@ -52,8 +52,8 @@ body {
   color: blue;
 }
 .section-info {
-  bottom: -90px;
-  width: 75%;
+  bottom: 200px;
+  width: 65%;
 }
 
 .text-bg-light {
@@ -68,6 +68,15 @@ body {
 .text-bg-primary:hover {
   transform: scale(1.05);
 }
+
+
+.Article-hover{
+  transition: all 1s;
+}
+.Article-hover:hover{
+  transform: scale(1.1);
+}
+
 
 
 @media (max-width: 991px) {
