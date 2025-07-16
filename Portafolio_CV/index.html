@@ -22,7 +22,7 @@
     <!-- Agregar el link css-->
     <link rel="stylesheet" href="style.css" />
     <!-- Agregar el Favicon-->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+    <link rel="shortcut icon" href="images/LogoCv.png" type="image/png" />
 
     <!-- fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,6 +30,16 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
+    />
+
+    <!-- Transicion-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
   </head>
   <body>
@@ -40,7 +50,7 @@
         >
           <p class="text-primary fs-2 m-0">- Hola</p>
           <h2 class="fw-bold">
-            Soy <span class="text-primary">Emerson</span> <br />
+            Soy <span class="Spamnombre text-primary">Emerson</span> <br />
             UX/UI Designer
           </h2>
           <!--div para hacer los laterales del cirlulo-->
@@ -55,9 +65,9 @@
               </p>
             </div>
             <!-- padre del circulo-->
-            <div class="d-flex justify-content-center">
+            <div class="padreCirculo d-flex justify-content-center">
               <!--circulo de para la imagen-->
-              <div class="b-div bg-primary position-relative">
+              <div class="hijoCirluloAzul b-div bg-primary position-relative">
                 <!-- Botones-->
                 <div
                   class="botones position-absolute d-flex justify-content-center align-items-center gap-2 bg-white p-2 rounded rounded-4"
@@ -82,7 +92,7 @@
               </div>
             </div>
             <!--redes solciales-->
-            <div class="comillas d-none d-lg-block p-5">
+            <div class="comillas sigueme d-none d-lg-block p-5">
               <p class="fw-bold">Siguéme en:</p>
               <div
                 class="iconosS d-flex align-items-center justify-content-center gap-2 fs-2"
@@ -93,40 +103,53 @@
                 <a href="#" class="Bder text-danger"
                   ><i class="tra bi bi-instagram hover"></i
                 ></a>
-                <a href="#" class="Bder text-black"
-                  ><i class="tra bi bi-twitter-x hover"></i
-                ></a>
+                <a
+                  href="https://github.com/152004E"
+                  class="Bder text-black"
+                  target="_blank"
+                >
+                  <i class="tra bi bi-github hover"></i>
+                </a>
               </div>
             </div>
             <!--Experiencia-->
-            <section class="section-info position-absolute" id="section-info">
+            <section
+              class="section-info position-absolute animate__animated animate__fadeInUp animate__delay-1s"
+              id="section-info"
+            >
               <div class="container">
                 <div class="row bg-black p-4 rounded-4 row-gap-2">
                   <div class="col-12 col-md-6 col-lg-4">
-                    <div class="text-bg-primary rounded-4 p-1 h-100">
-                      <h3 class="fs-1 fw-bolder">70+</h3>
-                      <p>
-                        Proyectos realizados en diseño gráfico, identidad
-                        visual, diseño web y UX/UI
+                    <div class="text-bg-primary rounded-4 p-3 h-100">
+                      <h3 class="fs-1 fw-bolder experienciaH3">15+</h3>
+                      <p class="experienciaP">
+                        Proyectos desarrollados para clientes locales y startups
+                        digitales
                       </p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg">
-                    <div class="text-bg-light rounded-4 p-1 h-100">
-                      <h3 class="fs-1 fw-bolder">12+</h3>
-                      <p>Años de Experiencia</p>
+                    <div class="text-bg-light rounded-4 p-3 h-100">
+                      <h3 class="fs-1 fw-bolder experienciaH3">3</h3>
+                      <p class="experienciaP">
+                        Años de experiencia en diseño y desarrollo web
+                      </p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg">
-                    <div class="text-bg-light rounded-4 p-1 h-100">
-                      <h3 class="fs-1 fw-bolder">12</h3>
-                      <p>Premios y menciones</p>
+                    <div class="text-bg-light rounded-4 p-3 h-100">
+                      <h3 class="fs-1 fw-bolder experienciaH3">6</h3>
+                      <p class="experienciaP">
+                        Proyectos integrando frontend, backend y bases de datos
+                      </p>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg">
-                    <div class="text-bg-light rounded-4 p-1 h-100">
-                      <h3 class="fs-1 fw-bolder">5+</h3>
-                      <p>Proyectos freelance a nivel nacional</p>
+                    <div class="text-bg-light rounded-4 p-3 h-100">
+                      <h3 class="fs-1 fw-bolder experienciaH3">2+</h3>
+                      <p class="experienciaP">
+                        Aplicaciones diseñadas con enfoque en usabilidad y rendimiento.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -147,11 +170,44 @@
       </div>
       <div class="container border border-primary-subtle my-5"></div>
     </section>
+
+    <section class="container d-flex justify-content-center">
+  <div
+    class="row border border-2 p-4 rounded-4 d-flex align-items-center justify-content-center blur-bg"
+    data-aos="fade-right"
+    style="max-width:700px;"
+  >
+    <div class="col-12 col-lg-10 py-3">
+      <div>
+        <span class="bg-primary-subtle text-primary px-3 py-1 rounded-pill">
+          Descripción
+        </span>
+        <h3 class="text-primary fw-bold fs-2 mt-3 solucionesDH4">
+          Emerson Fabian Reyes Arias.
+        </h3>
+        <p class="text-secondary mt-2">
+          Estudiante en formación de Análisis y Desarrollo de Software, con conocimientos en programación en JS y Java, bases de datos y desarrollo de aplicaciones web.
+        </p>
+        <a
+          href="https://github.com/152004E/web-huerta-directa"
+          target="_blank"
+          class="btn btn-primary mb-4 rounded-pill"
+        >
+          Ver en GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <div class="container border border-primary-subtle my-5"></div>
     <!--Servicios-->
     <section class="section-servicios" id="section-servicios">
       <div class="container pt-5">
         <div class="row">
-          <h3 class="fw-bold text-center text-uppercase fs-1 pb-4">
+          <h3
+            class="fw-bold text-white text-center text-uppercase fs-1 pb-4 TitulosH3"
+          >
             Soluciones digitales
           </h3>
           <div class="col-12 col-xl-6">
@@ -165,10 +221,13 @@
             <!-- Primer artículo -->
             <article
               class="Article-hover text-center border border-2 rounded-4 px-4 py-3 my-2"
+              data-aos="fade-right"
             >
               <i class="bi bi-search text-primary fs-1"></i>
-              <h4 class="text-primary fs-2 fw-bold">UX Research</h4>
-              <p>
+              <h4 class="text-primary fs-2 fw-bold solucionesDH4">
+                UX Research
+              </h4>
+              <p class="text-white">
                 Investigación centrada en usuarios para entender sus
                 necesidades, hábitos y comportamientos antes de diseñar una
                 solución efectiva.
@@ -178,9 +237,10 @@
             <!-- Segundo artículo -->
             <article
               class="text-bg-primary text-center border border-2 rounded-4 px-4 py-3 my-2 bg-primary"
+              data-aos="fade-left"
             >
               <i class="bi bi-bezier text-primary fs-1 text-white"></i>
-              <h4 class="fs-2 fw-bold">UX/UI Design</h4>
+              <h4 class="fs-2 fw-bold solucionesDH4">UX/UI Design</h4>
               <p>
                 Diseño de interfaces atractivas y funcionales que mejoran la
                 experiencia del usuario, combinando estética y usabilidad en
@@ -191,10 +251,13 @@
             <!-- Tercer artículo -->
             <article
               class="Article-hover text-center border border-2 rounded-4 px-4 py-3 my-2"
+              data-aos="fade-right"
             >
               <i class="bi bi-columns text-primary fs-1"></i>
-              <h4 class="text-primary fs-2 fw-bold">Prototipado</h4>
-              <p>
+              <h4 class="text-primary fs-2 fw-bold solucionesDH4">
+                Prototipado
+              </h4>
+              <p class="text-white">
                 Analizamos datos reales y aplicamos métodos cualitativos para
                 descubrir cómo optimizar cada interacción del usuario con el
                 producto.
@@ -211,14 +274,17 @@
     <!--Proyectos-->
     <section class="section-proyectos" id="section-proyectos">
       <div class="container">
-        <div class="row">
-          <h3 class="fw-bold text-center text-uppercase fs-1 pb-4 pt-4">
+        <div class="row justify-content-center">
+          <h3
+            class="fw-bold text-white text-center text-uppercase fs-1 pb-4 pt-4 TitulosH3"
+          >
             Últimos Proyectos
           </h3>
           <div class="col-12 col-xl-10">
-            <!--project 1-->
+            <!-- project 1: Huerta Directa -->
             <div
-              class="row border border-2 p-4 rounded-4 d-flex align-items-center justify-content-center"
+              class="row border border-2 p-4 rounded-4 d-flex align-items-center mb-3 blur-bg"
+              data-aos="fade-right"
             >
               <div class="col-12 col-lg-6">
                 <div>
@@ -226,20 +292,110 @@
                     class="bg-primary-subtle text-primary px-3 py-1 rounded-pill"
                     >Web App</span
                   >
-                  <h3 class="text-primary fw-bold fs-2 mt-2">
-                    Sitio web tipo E-Commers para agricultura colombiana
+                  <h3 class="text-primary fw-bold fs-2 mt-3 solucionesDH4">
+                    HuertaDirecta
                   </h3>
                   <p class="text-secondary mt-2">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Magnam quisquam repudiandae ab. Earum cumque tempore
-                    consectetur veritatis error accusamus iure, aliquam deleniti
-                    fuga laboriosam odio quae eos officia dolorum quos.
+                    HuertaDirecta es una plataforma web que conecta a campesinos
+                    colombianos con compradores, facilitando la venta directa de
+                    productos agrícolas frescos de forma simple, rápida y justa.
                   </p>
-                  <a href="#" class="btn btn-primary rounded-pill"
-                    >Conoce mas</a
+                  <a
+                    href="https://github.com/152004E/web-huerta-directa"
+                    target="_blank"
+                    class="btn btn-primary mb-4 rounded-pill"
                   >
+                    Ver en GitHub
+                  </a>
                 </div>
-                <div class="col-12 col-lg-6"></div>
+              </div>
+              <div
+                class="col-12 col-lg-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/proyecto-1.webp"
+                  alt="Huerta Directa"
+                  class="img-fluid rounded-4"
+                />
+              </div>
+            </div>
+
+            <!-- project 2: SENA Portfolio -->
+            <div
+              class="row border border-2 p-4 rounded-4 d-flex align-items-center mb-3 blur-bg"
+              data-aos="fade-left"
+            >
+              <div class="col-12 col-lg-6">
+                <div>
+                  <span
+                    class="bg-primary-subtle text-primary px-3 py-1 rounded-pill"
+                    >Portafolio</span
+                  >
+                  <h3 class="text-primary fw-bold fs-2 mt-3 solucionesDH4">
+                    SENA Portfolio
+                  </h3>
+                  <p class="text-secondary mt-2">
+                    Proyectos desarrollados en el SENA que demuestran mis
+                    habilidades y competencias técnicas en desarrollo web y
+                    programación.
+                  </p>
+                  <a
+                    href="https://github.com/152004E/SENA-Portfolio"
+                    target="_blank"
+                    class="btn btn-primary mb-4 rounded-pill"
+                  >
+                    Ver en GitHub
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col-12 col-lg-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/proyecto-2.webp"
+                  alt="SENA Portfolio"
+                  class="img-fluid rounded-4"
+                />
+              </div>
+            </div>
+
+            <!-- project 3: Personal Projects -->
+            <div
+              class="row border border-2 p-4 rounded-4 d-flex align-items-center blur-bg"
+              data-aos="fade-right"
+            >
+              <div class="col-12 col-lg-6">
+                <div>
+                  <span
+                    class="bg-primary-subtle text-primary px-3 py-1 rounded-pill"
+                    >Proyectos</span
+                  >
+                  <h3 class="text-primary fw-bold fs-2 mt-3 solucionesDH4">
+                    Personal Projects
+                  </h3>
+                  <p class="text-secondary mt-2">
+                    Estos proyectos reflejan mi aprendizaje y pasión por el
+                    desarrollo de software. Me han permitido fortalecer
+                    habilidades en programación, bases de datos y resolución de
+                    problemas.
+                  </p>
+                  <a
+                    href="https://github.com/152004E/Personal-projects"
+                    target="_blank"
+                    class="btn btn-primary mb-4 rounded-pill"
+                  >
+                    Ver en GitHub
+                  </a>
+                </div>
+              </div>
+              <div
+                class="col-12 col-lg-6 d-flex align-items-center justify-content-center"
+              >
+                <img
+                  src="images/proyecto-3-optimizada.png"
+                  alt="Proyectos personales"
+                  class="img-fluid rounded-4"
+                />
               </div>
             </div>
           </div>
@@ -248,30 +404,152 @@
     </section>
 
     <!--Proyectos-->
+    <div class="container border border-primary-subtle my-5"></div>
+    <!--Testimonios-->
+    <section class="section-tedtimonios py-5" id="section-testimonios">
+      <div class="container">
+        <h3
+          class="text-center my-5 text-white text-uppercase fw-bold fs-1 TitulosH3"
+        >
+          Testimonios
+        </h3>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-9 col-xl-8">
+                  <article class="bg-light border rounded-4 p-4 text-center">
+                    <img
+                      class="rounded-circle mb-2 TestimonioImg"
+                      src="https://randomuser.me/api/portraits/men/85.jpg"
+                      alt="Phoro random"
+                      height="100px"
+                    />
+                    <h2>Jose Reyes</h2>
+                    <ul
+                      class="list-unstyled d-flex align-items-center justify-content-center gap-2"
+                    >
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                    </ul>
+                    <p class="text-secondary">Supervisor directo</p>
+                    <p class="text-black">
+                      Es una persona comprometida, con gran capacidad de
+                      análisis y resolución de problemas. Siempre mostró una
+                      actitud proactiva y profesional.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-9 col-xl-8">
+                  <article class="bg-light border rounded-4 p-4 text-center">
+                    <img
+                      class="rounded-circle mb-2 TestimonioImg"
+                      src="https://randomuser.me/api/portraits/women/82.jpg"
+                      alt="Phoro random"
+                      height="90px"
+                    />
+                    <h2>Carolina Arias</h2>
+                    <ul
+                      class="list-unstyled d-flex align-items-center justify-content-center gap-2"
+                    >
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star-fill text-warning"></i></li>
+                      <li><i class="bi bi-star text-warning"></i></li>
+                    </ul>
+                    <p class="text-secondary pb-1">Compañera de equipo</p>
+                    <p class="text-black pb-2">
+                      Trabajar con él fue una experiencia excelente. Tiene
+                      habilidades de comunicación muy claras y siempre está
+                      dispuesto a colaborar y aprender.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleFade"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--Testimonios-->
+    <div class="container border border-primary-subtle my-5"></div>
+    <!--Footer-->
 
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+    <footer class="bg-transparent">
+      <div class="container text-center py-5">
+        <img
+          src="images/LogoCv.png"
+          alt=""
+          width="120px"
+          class="border rounded-circle mb-2 TestimonioImg"
+        />
+        <p class="text-white fw-bold fs-4 mb-1 solucionesDH4">
+          Emerson Fabián Reyes Arias
+        </p>
+        <p class="text-secondary mb-1">Desarrollador de Software</p>
+        <div
+          class="iconosS d-flex align-items-center justify-content-center gap-3 fs-2 mt-3"
+        >
+          <a href="#" class="Bder text-primary"
+            ><i class="tra bi bi-facebook hover"></i
+          ></a>
+          <a href="#" class="Bder text-danger"
+            ><i class="tra bi bi-instagram hover"></i
+          ></a>
+          <a
+            href="https://github.com/152004E"
+            class="Bder text-black"
+            target="_blank"
+          >
+            <i class="tra bi bi-github hover"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!--Footer-->
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 500, // Duración en milisegundos (0.5s)
+        once: true, // Solo una vez por scroll
+      });
+    </script>
   </body>
 </html>
