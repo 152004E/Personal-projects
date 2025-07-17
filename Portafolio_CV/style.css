@@ -5,6 +5,7 @@ body {
   background-blend-mode: overlay;
   background-size: cover;
   background-attachment: fixed;
+  box-sizing: border-box;
 }
 .fondo {
   background: linear-gradient(
