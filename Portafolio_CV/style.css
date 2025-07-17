@@ -92,6 +92,39 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
 }
+@media (min-width: 300px) and (max-width: 400px){
+  .container{
+    width: 100%;
+  }
+  .imagen-cv{
+    padding-top: 22px;
+    
+    
+    width: 200px;
+    
+
+  }
+  
+  .hijoCirluloAzul{
+    
+    
+    width: 250px;
+    height: 250px ;
+  }
+  .fondo {
+    height: 1290px;
+  }
+  .section-info {
+    width: 320px;
+    bottom: -600px;
+  }
+  .botones {
+    padding: 10px 10px !important;
+   left: -25px;
+    
+    bottom: -15px;
+  }
+}
 @media (min-width: 500px) and (max-width: 620px) {
   .fondo {
     height: 1250px;
