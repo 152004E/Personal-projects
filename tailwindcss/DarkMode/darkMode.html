@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dark Mode - ejercicio tailwind</title>
+    <link rel="stylesheet" href="../src/output.css" />
+    <link
+      rel="shortcut icon"
+      href="../images/LogoCvOP.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body class="">
+    <div
+      class="flex justify-center items-center flex-col bg-white h-screen dark:bg-gray-800 "
+    >
+      <div
+        class="flex justify-center items-center flex-col py-5 mb-4 bg-gray-100 dark:bg-gray-700 w-2xl h-36 rounded-2xl font-bold border-2 border-black dark:border-purple-500 dark:border-2 shadow-xl dark:text-white"
+      >
+        <h3
+          class="text-black text-4xl text-center mb-3 tracking-wide dark:text-white"
+        >
+          Modo dark en tailwind Css
+        </h3>
+        <button
+          id="ThemeDark"
+          class="bg-white text-2xl py-1 border-2 border-black dark:bg-gray-700 dark:border-purple-500 shadow-lg px-4 rounded cursor-pointer hover:bg-gray-300 transition duration-600 transform hover:scale-[1.05] dark:hover:bg-gray-800"
+        >
+          Dark
+        </button>
+      </div>
+
+      <div class="flex items-center justify-center gap-4">
+        <div class="flex items-center justify-center gap-4">
+          <div class="Targetas">
+            <h2 class="text-center mt-1 font-bold text-2xl">Prueba de Dark</h2>
+            <p class="p-5 text-lg">
+              Esta tarjeta muestra cómo puedes personalizar el modo oscuro en
+              Tailwind CSS para mejorar la experiencia del usuario.
+            </p>
+          </div>
+          <div class="Targetas">
+            <h2 class="text-center mt-1 font-bold text-2xl">Prueba de Dark</h2>
+            <p class="p-5 text-lg">
+              Cambia los estilos y observa cómo se adapta el diseño
+              automáticamente gracias a las utilidades de Tailwind.
+            </p>
+          </div>
+          <div class="Targetas">
+            <h2 class="text-center mt-1 font-bold text-2xl">Prueba de Dark</h2>
+            <p class="p-5 text-lg">
+              Tailwind CSS facilita la creación de interfaces modernas y
+              responsivas con clases simples y personalizables.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center">
+        <div
+          class="w-[997px] border-2 p-2 mt-4 rounded-lg bg-gray-100 dark:text-white dark:border-purple-500 dark:bg-gray-700"
+        >
+          <h2>
+            Ejemplo de bloque con Tailwind CSS: este bloque utiliza un ancho
+            personalizado, borde, padding y un fondo gris claro. Puedes
+            modificar estos estilos fácilmente usando las utilidades de Tailwind
+            para adaptarlo a tus necesidades. Experimenta cambiando los valores
+            para ver cómo afectan el diseño.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="darkMode.js"></script>
+</html>

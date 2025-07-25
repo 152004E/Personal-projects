@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+*{ 
+    @apply transition duration-500
+}
+
+.Targetas{
+    @apply w-80 bg-amber-50 h-48 rounded-lg shadow-xl bg-gray-100 border-2 transform duration-400   hover:scale-[1.05] cursor-pointer dark:bg-gray-700 dark:border-purple-500 dark:text-white
+}
+
