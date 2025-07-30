@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
 
+@font-face {
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 300 400 600;
+  font-display: swap;
+  src: url("../fonts/Outfit/Outfit-VariableFont_wght.ttf") format("woff2");
+
+}
+
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 *{ 
@@ -11,3 +21,13 @@
     @apply w-80 bg-amber-50 h-48 rounded-lg shadow-xl bg-gray-100 border-2 transform duration-400   hover:scale-[1.05] cursor-pointer dark:bg-gray-700 dark:border-purple-500 dark:text-white
 }
 
+
+@theme {
+  --color-Soft-blue: hsl(215, 51%, 70%);
+  --color-Cyan: hsl(178, 100%, 50%);
+  --color-Very-dark-blue-main-BG: hsl(217, 54%, 11%);
+  --color-Very-dark-blue-card-BG: hsl(216, 50%, 16%);
+  --color-Very-dark-blue-line: hsl(215, 32%, 27%);
+  --color-White: hsl(0, 0%, 100%);
+  --font-Outfit: Outfit;
+}
