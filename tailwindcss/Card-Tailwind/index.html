@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,10 +11,12 @@
       type="image/x-icon"
     />
   </head>
-  <body class="bg-Very-dark-blue-main-BG">
+  <body
+    class="bg-[linear-gradient(to_right,_#2d2d2d_0%,_#1e1e26_20%,_#1e1e26_80%,_#2d2d2d_100%)] dark:bg-gradient-to-r dark:from-[#3f4347] dark:via-[#ffffff] dark:to-[#3f4347]"
+  >
     <main class="flex items-center justify-center h-screen relative">
       <div
-        class="bg-Very-dark-blue-card-BG flex items-center justify-center flex-col rounded-3xl px-6 py-7 w-82 shadow-blue-500/70 transition-transform duration-200 transform hover:scale-[1.02] hover:shadow-lg hover:"
+        class="bg-Very-dark-blue-card-BG flex items-center justify-center flex-col rounded-3xl px-6 py-7 w-82 shadow-blue-500/70 transition-transform duration-200 transform hover:scale-[1.02] hover:shadow-lg dark:bg-[#c0c0c0] dark:shadow-[#253e5a] dark:hover:shadow-2xl dark:border-2"
       >
         <div class="relative group">
           <img
@@ -23,13 +25,13 @@
             alt="Imagen de Equilibrium"
           />
           <div
-            class="bg-cyan-500/50 absolute top-0 rounded-2xl w-full h-65 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity !duration-700 cursor-pointer"
+            class="bg-cyan-500/50 absolute top-0 rounded-3xl w-full h-65 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity !duration-700 cursor-pointer dark:bg-[#253e5a]/50 dark:opacity-0 dark:group-hover:opacity-100 dark:transition-opacity dark:duration-700"
           >
             <img src="/images/icon-view.svg" class="rounded-xl" alt="" />
           </div>
-          <div class="w-full flex items-center justify-start">
+          <div class="w-full flex items-center justify-startl">
             <p
-              class="text-white border text-sm border-Cyan py-1 px-2 font-black rounded-2xl bg-Very-dark-blue-main-BG top-[-10px] absolute"
+              class="text-white border-2 text-sm border-Cyan py-1 px-2 font-black rounded-2xl bg-Very-dark-blue-main-BG top-[-10px] absolute dark:border-Very-dark-blue-card-BG dark:text-[#1A2D42] dark:bg-White"
             >
               Oferta especial
             </p>
@@ -38,32 +40,40 @@
 
         <div class="w-full">
           <h2
-            class="text-white text-xl font-bold text-left tracking-wide hover:text-Cyan cursor-pointer"
+            class="text-white text-xl font-bold text-left tracking-wide hover:text-Cyan cursor-pointer dark:text-black dark:hover:text-Very-dark-blue-line"
           >
             Acer Aspire 3 A315‑56
           </h2>
         </div>
-        <div class="border w-full m-4 border-blue-500/50"></div>
-        <p class="font-medium text-slate-400/90">l
+        <div
+          class="border w-full m-4 border-blue-500/50 dark:border-Very-dark-blue-card-BG/50"
+        ></div>
+        <p class="font-medium text-slate-400/90 dark:text-black/50">
           Potente y elegante, perfecto para trabajo, estudio y ocio.
         </p>
         <div class="flex justify-between mt-4 text-ms gap-2 w-full">
           <div class="flex items-center gap-1">
             <img src="/images/icon-ethereum.svg" alt="Icono Ethereum" />
-            <p class="text-Cyan">850.000 COP</p>
+            <p
+              class="text-Cyan dark:text-Very-dark-blue-card-BG dark:font-bold tracking-wide"
+            >
+              850.000 COP
+            </p>
           </div>
           <div class="flex items-center justify-center gap-1">
             <img src="/images/icon-clock.svg" alt="Icono reloj" />
-            <p class="font-medium text-slate-400/70">Quedan 3 días</p>
+            <p class="font-medium text-slate-500" >Quedan 3 días</p>
           </div>
         </div>
 
-        <div class="border w-full m-4 border-blue-500/50"></div>
+        <div
+          class="border w-full m-4 border-blue-500/50 dark:border-Very-dark-blue-card-BG/50"
+        ></div>
         <div class="flex justify-center items-center gap-2">
-          <span class="text-Cyan hover:text-Soft-blue hover:cursor-pointer"
+          <span class="text-Cyan hover:text-Soft-blue hover:cursor-pointer dark:text-black    "
             >Publicado por :
           </span>
-          <p class="text-White">Emerson Reyes</p>
+          <p class="text-White dark:text-slate-500 ">Emerson Reyes</p>
           <img
             src="/images/imagenparagithudoptimazadaOP.png"
             class="w-12 border-2 border-White rounded-full shadow-lg shadow-blue-500/70 transition-transform duration-900 transform hover:scale-110 hover:cursor-pointer"
@@ -71,6 +81,13 @@
           />
         </div>
       </div>
+      <button
+        id="idCardDark"
+        class="text-White text-2xl px-4 py-2 border-2 font-bold rounded-2xl absolute top-15 right-10 cursor-pointer tracking-wide uppercase shadow-lg shadow-Cyan transition-transform !duration-500 hover:scale-[1.05] hover:shadow-none dark:text-[#1A2D42] dark:shadow-[#253e5a] dark:bg-White"
+      >
+        Light
+      </button>
     </main>
+    <script src="cardDark.js"></script>
   </body>
 </html>
