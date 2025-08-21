@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+/* npx tailwindcss -i ./src/input.css -o ./src/output.css --watch */
+
 @font-face {
   font-family: Outfit;
   font-style: normal;
@@ -13,12 +15,21 @@
 * {
   @apply transition duration-500;
 }
+@layer components {
+  .gradient-background {
+    background: radial-gradient(
+      99% 99% at 90% 0%,           /* tamaño y posición (casi todo el ancho, centrado arriba) */
+      hsl(293, 80%, 24%) 0%,       /* color inicial */
+      hsl(216, 24%, 12%) 100%      /* color final */
+    );
+  }
+}
 
 .Targetas {
   @apply w-80  h-48 rounded-lg shadow-xl bg-gray-100 border-2 transform duration-400   hover:scale-[1.05] cursor-pointer dark:bg-gray-700 dark:border-purple-500 dark:text-white;
 }
 .botonesOpiniones {
-  @apply bg-amber-700 py-2 px-4  rounded-full shadow-amber-500/30 font-bold text-[20px] hover:bg-amber-500 transition !duration-[1s] shadow-lg border-2 border-black cursor-pointer;
+  @apply bg-amber-700 py-2 px-4  rounded-full shadow-amber-500/30 font-bold text-[20px] hover:bg-amber-500 transition !duration-[1s] shadow-lg border-2 border-black cursor-pointer focus:bg-amber-500;
 }
 
 @theme {
