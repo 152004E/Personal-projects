@@ -13,9 +13,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 * {
-  @apply transition duration-500;
+  @apply transition duration-[1s] ;
 }
-@layer components {
+/* @layer components {
   .gradient-background-targeta {
     background: radial-gradient(
       99% 99% at 90% 0%,
@@ -38,6 +38,7 @@
       hsl(216, 24%, 12%) 85%,
       hsl(293, 80%, 24%) 100%
     );
+    
   }
   .dark .gradient-background-main {
     background: radial-gradient(
@@ -45,6 +46,90 @@
       hsl(0, 0%, 53%) 85%,
       hsl(293, 80%, 24%) 100%
     );
+  }
+} */
+@layer components {
+  .gradient-background-main {
+    @apply relative overflow-hidden;
+    background-color: hsl(216, 24%, 12%);
+  }
+
+  .gradient-background-main::before,
+  .gradient-background-main::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    z-index: 1; /* ✅ DEBE SER NEGATIVO para estar detrás de TODO */
+    transition: opacity 2s ease;
+  }
+
+  .gradient-background-main::before {
+    background: radial-gradient(
+      89% 89% at 100% 0%,
+      hsl(216, 24%, 12%) 85%,
+      hsl(293, 80%, 24%) 100%
+    );
+    opacity: 1;
+  }
+
+  .gradient-background-main::after {
+    background: radial-gradient(
+      89% 89% at 0% 0%,
+      hsl(0, 0%, 53%) 85%,
+      hsl(293, 80%, 24%) 100%
+    );
+    opacity: 0;
+  }
+
+  .dark .gradient-background-main::before { opacity: 0; }
+  .dark .gradient-background-main::after { opacity: 1; }
+
+  /* TARJETAS */
+  .gradient-background-targeta {
+    @apply relative overflow-hidden;
+    background-color: hsl(293, 80%, 24%);
+    /* ✅ AGREGAR Z-INDEX POSITIVO al contenedor */
+    z-index: 1;
+  }
+
+  .gradient-background-targeta::before,
+  .gradient-background-targeta::after {
+    content: '';
+    @apply absolute inset-0 pointer-events-none;
+    z-index: -1; /* ✅ NEGATIVO para estar detrás del contenido de la tarjeta */
+    transition: opacity 1s ease;
+  }
+
+  .gradient-background-targeta::before {
+    background: radial-gradient(
+      99% 99% at 90% 0%,
+      hsl(293, 80%, 24%) 0%,
+      hsl(216, 24%, 12%) 100%
+    );
+    opacity: 1;
+  }
+
+  .gradient-background-targeta::after {
+    background: radial-gradient(
+      99% 99% at 0% 0%,
+      hsl(293, 80%, 24%) 50%,
+      hsl(0, 0%, 60%) 90%
+    );
+    opacity: 0;
+  }
+
+  .dark .gradient-background-targeta::before { opacity: 0; }
+  .dark .gradient-background-targeta::after { opacity: 1; }
+
+  /* ✅ SOLUCIÓN ADICIONAL: Asegurar que los contenidos estén visibles */
+  #containerOpinion,
+  #containerAgradecimiento {
+    position: relative;
+    z-index: 2; /* ✅ MAYOR que el z-index de .gradient-background-targeta */
+  }
+
+  /* ✅ ASEGURAR que el botón dark esté siempre visible */
+  #chageDark {
+    z-index: 10; /* ✅ MUY ALTO para estar encima de todo */
   }
 }
 
