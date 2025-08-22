@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="transition-colors duration-[5s]">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,23 +11,29 @@
       type="image/x-icon"
     />
   </head>
-  <body class="font-Outfit">
+  <body class="font-Outfit transition-all !duration-[5s]">
     <main
-      class="bg-gray-950 h-screen flex items-center justify-center relative"
+      class="bg-gray-950 gradient-background-main h-screen flex items-center justify-center relative transition-all duration-500"
     >
+      <button
+        id="chageDark"
+        class="absolute border border-White top-[32px] right-[32px] text-White py-2 px-4 rounded-2xl text-2xl cursor-pointer transition-all duration-[3s] hover:scale-[1.1] hover:bg-purple-400/50 dark:text-purple-700 dark:border-purple-700 dark:hover:bg-neutral-400 dark:border-2 dark:font-bold"
+      >
+        Dark
+      </button>
       <div
         id="containerOpinion"
-        class="h-130 w-104 gradient-background p-10 rounded-3xl shadow-lg shadow-purple-500/70 transition-opacity duration-500 ease-in-out opacity-100"
+        class="h-130 w-104 gradient-background-targeta p-10 rounded-3xl shadow-lg shadow-purple-500/70 transition-opacity duration-500 ease-in-out opacity-100"
       >
         <div class="mb-4">
           <img
-            class="w-8 box-content p-3 bg-gray-700 rounded-full shadow-purple-500 shadow-md !transition-transform !duration-[2s] hover:rotate-360"
+            class="w-8 box-content p-3 bg-gray-700 rounded-full shadow-purple-500 shadow-md !transition-transform !duration-[2s] hover:rotate-360 dark:bg-neutral-500"
             src="../images/howDidWeDo/icon-star.svg"
             alt=""
           />
         </div>
         <h2
-          class="bg-gradient-to-r from-amber-700 to-purple-500 bg-clip-text text-transparent p-1 text-4xl font-extrabold"
+          class="bg-gradient-to-r from-amber-700 dark:from-amber-700 to-purple-500 dark:to-purple-400 bg-clip-text text-transparent p-1 text-4xl font-extrabold"
         >
           ¿Cómo lo hicimos?
         </h2>
@@ -37,7 +43,7 @@
         />
 
         <p
-          class="mb-5 mt-7 text-gray-300 text-[16px] box-border p-5 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic"
+          class="mb-5 mt-7 text-gray-300 text-[17px] box-border p-3 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic dark:text-black dark:backdrop-blur-3xl"
         >
           Tu opinión es muy importante para nosotros. Danos tu calificación del
           1 al 5 y cuéntanos qué te pareció la experiencia. Con tus comentarios
@@ -54,7 +60,7 @@
 
         <button
           id="submitBtn"
-          class="bg-amber-700 font-bold tracking-wider text-[19px] p-3 w-full rounded-2xl shadow-amber-500/30 shadow-lg border-2 border-black cursor-pointer transition !duration-[1s] hover:bg-amber-500"
+          class="bg-amber-700 font-bold tracking-wider text-[19px] p-3 w-full rounded-2xl shadow-amber-500/30 shadow-lg border-2 border-black cursor-pointer transition !duration-[1s] hover:bg-amber-500 hover:scale-[1.05]"
         >
           SUBMIT
         </button>
@@ -63,7 +69,7 @@
       <!--segundo mensaje como modal-->
       <div
         id="containerAgradecimiento"
-        class=" h-130 w-104 absolute gradient-background p-10 rounded-3xl shadow-lg shadow-purple-500/70 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none"
+        class="h-130 w-104 absolute gradient-background-targeta p-10 rounded-3xl shadow-lg shadow-purple-500/70 transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none"
       >
         <button
           id="volverBtn"
@@ -74,19 +80,19 @@
 
         <div class="mb-4 flex items-center justify-center">
           <img
-            class="box-content p-3 bg-gray-700 rounded-2xl shadow-purple-500 shadow-md"
+            class="box-content p-3 bg-gray-700 rounded-2xl shadow-purple-500 shadow-md dark:bg-neutral-500"
             src="../images/howDidWeDo/illustration-thank-you.svg"
             alt=""
           />
         </div>
 
         <h3
-          class="text-center mb-3 mt-7 text-amber-600 text-[18px] box-border p-5 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic"
+          class="text-center mb-3 mt-7 text-amber-600 text-[22px] box-border p-5 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic dark:font-bold dark:backdrop-blur-3xl dark:text-amber-500"
         >
           Tu calificación fue <span id="score">4</span> de 5.
         </h3>
         <h2
-          class="bg-gradient-to-r from-amber-700 to-purple-500 bg-clip-text text-transparent p-1 text-2xl font-extrabold text-center"
+          class="bg-gradient-to-r from-amber-700 dark:from-amber-500 to-purple-500 dark:to-purple-400 bg-clip-text text-transparent p-1 text-2xl font-extrabold text-center"
         >
           ¡Gracias por tu opinión!
         </h2>
@@ -96,7 +102,7 @@
         />
 
         <p
-          class="mb-5 mt-7 text-gray-300 text-[16px] box-border p-5 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic"
+          class="mb-5 mt-7 text-gray-300 text-[16px] box-border p-5 border border-gray-500 rounded-2xl shadow-purple-500/50 shadow-lg italic dark:text-black dark:font-bold dark:backdrop-blur-2xl"
         >
           Gracias por compartir tu experiencia. Con tu calificación podemos
           seguir mejorando para ti.
