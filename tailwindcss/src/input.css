@@ -15,39 +15,8 @@
 * {
   @apply transition duration-[1s] ;
 }
-/* @layer components {
-  .gradient-background-targeta {
-    background: radial-gradient(
-      99% 99% at 90% 0%,
-      hsl(293, 80%, 24%) 0%,
-      hsl(216, 24%, 12%) 100%
-    );
-  }
 
-  .dark .gradient-background-targeta {
-    background: radial-gradient(
-      99% 99% at 0% 0%,
-      hsl(293, 80%, 24%) 50%,
-      hsl(0, 0%, 60%) 90%
-    );
-  }
 
-  .gradient-background-main {
-    background: radial-gradient(
-      89% 89% at 100% 0%,
-      hsl(216, 24%, 12%) 85%,
-      hsl(293, 80%, 24%) 100%
-    );
-    
-  }
-  .dark .gradient-background-main {
-    background: radial-gradient(
-      89% 89% at 0% 0%,
-      hsl(0, 0%, 53%) 85%,
-      hsl(293, 80%, 24%) 100%
-    );
-  }
-} */
 @layer components {
   .gradient-background-main {
     @apply relative overflow-hidden;
