@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,10 +14,10 @@
     <title>Testiminios | Taidwind</title>
   </head>
   <body
-    class="bg-Grey-400/30 font-Barlow overflow-x-hidden flex items-center justify-center"
+    class="bg-Grey-400/30 font-Barlow overflow-x-hidden flex items-center justify-center dark:bg-Grey-400"
   >
     <main
-      class="flex flex-col max-sm:items-center mt-10  lg:gap-5 lg:grid lg:grid-cols-4 lg:w-[1410px]"
+      class="flex flex-col max-sm:items-center mt-10 lg:gap-5 lg:grid lg:grid-cols-4 lg:w-[1410px]"
     >
       <!-- primer article -->
       <article class="card bg-Purple-500 lg:col-span-2 lg:w-full cardBackgru">
@@ -78,30 +78,34 @@
       </article>
       <!-- tercero
  -->
-      <article class="card max-sm:mt-8 bg-white lg:w-full">
+      <article class="card max-sm:mt-8 bg-white lg:w-full dark:bg-gray-500">
         <div class="flex gap-5 my-2">
           <img
             class="rounded-full border-2 border-Purple-300 w-12 h-12"
             src="../images/TestimoniosImages/image-jeanette.jpg"
             alt="Fotografia de Jeanette"
           />
-          <div class="text-base text-Grey-500">
+          <div class="text-base text-Grey-500 dark:text-White">
             <h2 class="font-bold">Jeanette Harmon</h2>
-            <p class="text-Grey-500/70">Graduada verificada</p>
+            <p class="text-Grey-500/70 dark:text-White/70">
+              Graduada verificada
+            </p>
           </div>
         </div>
-        <p class="text-Grey-500 text-[20px] font-bold mb-3 leading-5">
+        <p
+          class="text-Grey-500 text-[20px] font-bold mb-3 leading-5 dark:text-White"
+        >
           Una experiencia en general maravillosa y gratificante.
         </p>
-        <p class="text-[18px] text-Grey-500/70 font-semibold leading-6">
+        <p
+          class="text-[18px] text-Grey-500/70 font-semibold leading-6 dark:text-Grey-200"
+        >
           “ ¡Gracias por la maravillosa experiencia! Ahora tengo un trabajo que
           realmente disfruto, y gano bien mientras hago algo que me apasiona. ”
         </p>
       </article>
       <!-- cuarto -->
-      <article
-        class="card max-sm:mt-8 bg-gray-900 lg:w-full lg:col-span-2"
-      >
+      <article class="card max-sm:mt-8 bg-gray-900 lg:w-full lg:col-span-2">
         <div class="flex gap-5 my-2">
           <img
             class="rounded-full border-2 border-Purple-300 w-12 h-12"
@@ -129,7 +133,7 @@
       </article>
 
       <article
-        class="card max-sm:mt-8 bg-White lg:w-full lg:col-start-4 lg:row-start-1 lg:row-span-2"
+        class="card max-sm:mt-8 bg-White lg:w-full lg:col-start-4 lg:row-start-1 lg:row-span-2 dark:bg-gray-500"
       >
         <div class="flex gap-5 my-2">
           <img
@@ -137,15 +141,21 @@
             src="../images/TestimoniosImages/image-kira.jpg"
             alt="Fotografia de Kira"
           />
-          <div class="text-base text-Grey-500">
+          <div class="text-base text-Grey-500 dark:text-White">
             <h2 class="font-bold">Kira Whittle</h2>
-            <p class="text-Grey-500/70">Graduada verificada</p>
+            <p class="text-Grey-500/70 dark:text-White/70">
+              Graduada verificada
+            </p>
           </div>
         </div>
-        <p class="text-Grey-500 text-[20px] font-semibold mb-3 leading-5">
+        <p
+          class="text-Grey-500 text-[20px] font-semibold mb-3 leading-5 dark:text-White"
+        >
           Una experiencia que cambió mi vida. ¡Muy recomendada!
         </p>
-        <p class="text-[18px] text-Grey-500/70 font-semibold leading-6">
+        <p
+          class="text-[18px] text-Grey-500/70 font-semibold leading-6 dark:text-Grey-200"
+        >
           “ Antes de unirme al bootcamp, nunca había escrito una sola línea de
           código. Necesitaba estructura por parte de profesionales que pudieran
           ayudarme a aprender programación paso a paso. Una exalumna, que solo
@@ -160,6 +170,13 @@
           múltiples ofertas. ¡Lo recomiendo al 100%! ”
         </p>
       </article>
+      <button
+        id="chageDark"
+        class="absolute border border-White bottom-[20px] right-[32px] text-White py-2 px-4 rounded-2xl text-2xl cursor-pointer transition-all duration-[1s] hover:scale-[1.1] hover:bg-purple-400/50 dark:text-purple-700 dark:border-purple-700 dark:hover:bg-neutral-400 dark:border-2 dark:font-bold"
+      >
+        Dark
+      </button>
     </main>
+    <script src="testimonios.js"></script>
   </body>
 </html>
