@@ -1,0 +1,35 @@
+.card {
+  border: solid red 1px;
+  padding: 15px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+  transition: all 1s;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: none;
+  cursor: pointer;
+}
+.img {
+  width: 200px;
+  border-radius: 15px;
+}
+.container {
+  display: flex;
+  gap: 30px;
+}
+.btn {
+    font-size: 17px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 1s;
+}
+
+.btn:hover{
+    background-color: antiquewhite;
+    color: black;
+}
