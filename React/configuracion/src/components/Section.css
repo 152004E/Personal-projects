@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   border: solid red 1px;
   padding: 15px;
   border-radius: 15px;
@@ -6,6 +7,7 @@
   letter-spacing: 2px;
   box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
   transition: all 1s;
+  width: 250px;
 }
 .card:hover {
   transform: scale(1.02);
@@ -13,15 +15,19 @@
   cursor: pointer;
 }
 .img {
-  width: 200px;
+  width: 150px;
   border-radius: 15px;
 }
 .container {
+  max-width: 1200px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .btn {
-    font-size: 17px;
+  font-size: 17px;
   padding: 10px 25px;
   border-radius: 5px;
   cursor: pointer;
@@ -29,7 +35,41 @@
   transition: all 1s;
 }
 
-.btn:hover{
-    background-color: antiquewhite;
-    color: black;
+.btn:hover {
+  background-color: antiquewhite;
+  color: black;
+}
+
+.containerSiguiente {
+  margin-top: 30px;
+  right: 30px;
+  top: 100px;
+  position: fixed;
+  display: flex;
+  gap: 20px;
+}
+.containerAnterior {
+  margin-top: 30px;
+  left: 30px;
+  top: 100px;
+  position: fixed;
+  display: flex;
+  gap: 20px;
+}
+.btnSiguiente {
+  border-radius: 10px;
+  background-color: red;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transition: all 1s;
+}
+.btnSiguiente:hover {
+  transform: scale(1.08);
+  box-shadow: none;
+  background-color: antiquewhite;
+  color: black;
 }

@@ -1,4 +1,4 @@
-export const Header = ({ tilte, show }) => {
+ const Header = ({ tilte, show }) => {
   return (
     <header>
       <h1 className="tilte">{tilte || "titulo por defecto"}</h1>
@@ -7,3 +7,4 @@ export const Header = ({ tilte, show }) => {
     </header>
   );
 };
+export default Header;
