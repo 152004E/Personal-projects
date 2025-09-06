@@ -1,4 +1,36 @@
-:root {
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@import "tailwindcss";
+
+@font-face {
+font-family: Poppins;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../src/assets/fonts/Poppins/Poppins-Regular.ttf") format("woff2");
+}
+@font-face {
+font-family: Poppins;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../src/assets/fonts/Poppins/Poppins-ExtraLight.ttf") format("woff2");
+}
+@font-face {
+font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../src/assets/fonts/Poppins/Poppins-SemiBold.ttf") format("woff2");
+}
+@theme {
+  /* Primary colors */
+  --color-Red-500: hsl(0, 78%, 62%);
+  --color-Cyan-500: hsl(180, 62%, 55%);
+  --color-Orange-500: hsl(34, 97%, 64%);
+  --color-Blue-500: hsl(212, 86%, 64%);
+
+  /* Neutrals */
+  --color-Grey-500: hsl(234, 12%, 34%);
+  --color-Grey-400: hsl(212, 6%, 44%);
+  --color-White: hsl(0, 0%, 100%);
+   --font-Poppins: "Poppins", sans-serif; 
 }
