@@ -1,7 +1,11 @@
+import { Form } from "./components/Form";
+import { Hero } from "./components/Hero";
+
 function App() {
   return (
     <>
-      <h1>hola mundo</h1>
+      <Hero />
+      <Form />
     </>
   );
 }
