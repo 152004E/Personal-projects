@@ -1,5 +1,5 @@
-import { Form } from "./components/Form";
-import { Hero } from "./components/Hero";
+import { Form, Hero } from "./components";
+
 
 function App() {
   return (
