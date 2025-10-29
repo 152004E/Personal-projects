@@ -6,18 +6,19 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 export const Footer = () => {
   return (
     <footer>
-      <ul>
+      <ul className="flex gap-4 place-content-center mb-10 "> 
         <li>
-          <a href="#"><FontAwesomeIcon icon={faFacebook} /></a>
+          <a className="redesSociales" href="#"><FontAwesomeIcon icon={faFacebook} /></a>
         </li>
         <li>
-          <a href="#"><FontAwesomeIcon icon={faXTwitter} /></a>
+          <a className="redesSociales" href="#"><FontAwesomeIcon icon={faXTwitter} /></a>
         </li>
         <li>
-          <a href="#"><FontAwesomeIcon icon={faInstagram} /></a>
+          <a className="redesSociales" href="#"><FontAwesomeIcon icon={faInstagram} /></a>
         </li>
         
       </ul>
+      <p className="text-center text-Gray-400">© 2025 Kisame15. Todos los derechos reservados.</p>
     </footer>
   );
 };

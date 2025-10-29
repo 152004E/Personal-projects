@@ -8,7 +8,7 @@ function App()  {
       <Form />
       <Dashboard />
       <Footer />
-      <p>© 2025 Kisame15. Todos los derechos reservados.</p>
+      
     </main>
   );
 }

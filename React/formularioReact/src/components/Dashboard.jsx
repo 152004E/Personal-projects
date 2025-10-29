@@ -1,7 +1,7 @@
-import logo from "../assets/images/illustration-dashboard.png";
+import logo from "../assets/images/imgFormly.png";
 export const Dashboard = () => {
   return (
-    <img width={300} src={logo} alt="Dashboard" />
+    <img className="w-[320px] m-auto mb-[120px]" src={logo} alt="Dashboard" />
   )
 }
 

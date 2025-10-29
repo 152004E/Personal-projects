@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+.redesSociales {
+  @apply text-Blue-500 border text-xl p-1 border-Gray-400 rounded-full hover:bg-Blue-500 hover:text-white hover:border-Blue-500 transition-all duration-500;
+}
+
 @font-face {
   font-family: "Libre Franklin";
   font-style: normal;
@@ -7,7 +11,6 @@
   font-display: swap;
   src: url("../src/assets/fonts/Libre_Franklin") format("woff2");
 }
-
 
 @theme {
   --color-Blue-500: hsl(223, 87%, 63%);
