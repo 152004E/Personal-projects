@@ -18,7 +18,7 @@ export const Footer = () => {
         </li>
         
       </ul>
-      <p className="text-center text-Gray-400">© 2025 Kisame15. Todos los derechos reservados.</p>
+      <p className="text-center text-Gray-400 lg:text-xl">© 2025 Kisame15. Todos los derechos reservados.</p>
     </footer>
   );
 };
