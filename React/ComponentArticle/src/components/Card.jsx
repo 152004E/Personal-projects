@@ -16,6 +16,8 @@ export const Card = () => {
         </p>
         <div className="border border-Desaturated-Dark-Blue/50  w-full mb-4"></div>
         <FooterCard />
+        <FooterCard />
+
       </div>
     </div>
   );
