@@ -1,10 +1,11 @@
 import { FooterCard } from "./FooterCard";
 import { ImgCard } from "./ImgCard";
+import { ShareIcon } from "./ShareIcon";
 export const Card = () => {
   return (
-    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden">
+    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden relative">
       <ImgCard />
-      <div className="p-6">
+      <div className="px-6 pt-2 ">
         <p className="text-black/80 text-xl font-bold mb-4">
           Lleva tu setup al siguiente nivel con estos increíbles toques
           tecnológicos.
@@ -15,10 +16,11 @@ export const Card = () => {
           potente, moderno y listo para la acción.
         </p>
         <div className="border border-Desaturated-Dark-Blue/50  w-full mb-4"></div>
-        <FooterCard />
-        <FooterCard />
 
+        <FooterCard />
       </div>
+        <ShareIcon/>
+
     </div>
   );
 };

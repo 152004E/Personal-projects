@@ -5,7 +5,7 @@ export const FooterCard = () => {
 
    
   return (
-    <footer className="flex justify-around items-center">
+    <footer className="flex justify-center items-center gap-10   h-16  ">
         <img src={avatar} alt=""  className="w-15 rounded-full cursor-pointer transition-all duration-500 hover:scale-[1.08]" />
       <div>
         <p className="text-black/70 text-sm font-bold ">kisame hoshigaki</p>
