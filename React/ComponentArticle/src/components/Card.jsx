@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import { FooterCard } from "./FooterCard";
 import { ImgCard } from "./ImgCard";
 import { ShareIcon } from "./ShareIcon";
