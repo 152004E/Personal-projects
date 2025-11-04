@@ -7,7 +7,7 @@ import { ShareButton } from "./ShareButton";
 
 export const ShareIcon = () => {
   return (
-    <div className="flex justify-around items-center h-16  bg-Very-Dark-Grayish-Blue text-Light-Grayish-Blue absolute bottom-0 w-full"   >
+    <div className="flex justify-around items-center h-19  bg-Very-Dark-Grayish-Blue text-Light-Grayish-Blue absolute bottom-0 w-full "   >
       <div className="flex gap-5 tracking-[5px] ">
         <p className="uppercase ">share</p>
         <ul className="flex gap-3 text-[18px]">

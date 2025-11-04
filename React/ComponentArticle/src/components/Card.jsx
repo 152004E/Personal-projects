@@ -1,10 +1,16 @@
 import { useContext } from "react";
+
+import { ShowContext } from "../Context/ContextShow";
+
 import { FooterCard } from "./FooterCard";
 import { ImgCard } from "./ImgCard";
 import { ShareIcon } from "./ShareIcon";
 export const Card = () => {
+
+  const {show} = useContext(ShowContext);
+
   return (
-    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden relative">
+    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden relative md:flex md:w-[700px]">
       <ImgCard />
       <div className="px-6 pt-2 ">
         <p className="text-black/80 text-xl font-bold mb-4">
@@ -20,7 +26,7 @@ export const Card = () => {
 
         <FooterCard />
       </div>
-        <ShareIcon/>
+      {show &&  <ShareIcon/>}
 
     </div>
   );
