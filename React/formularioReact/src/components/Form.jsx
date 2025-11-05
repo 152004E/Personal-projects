@@ -29,7 +29,7 @@ export const Form = () => {
           errors.email && "border-Red-400"
         }`}
         type="email"
-        placeholder="ingresu su correo electronico"
+        placeholder="ingrese su correo electronico"
         {...register("email", {
           required: true,
           pattern:
