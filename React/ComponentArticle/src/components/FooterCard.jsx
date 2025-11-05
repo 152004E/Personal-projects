@@ -10,8 +10,8 @@ export const FooterCard = () => {
           className="w-15 rounded-full cursor-pointer transition-all duration-500 hover:scale-[1.08]"
         />
         <div>
-          <p className="text-black/70 text-sm font-bold ">kisame hoshigaki</p>
-          <p className="text-Very-Dark-Grayish-Blue/70 font-bold text-[11px]">
+          <p className="text-black/70 text-sm font-bold md:text-[18px]">kisame hoshigaki</p>
+          <p className="text-Very-Dark-Grayish-Blue/70 font-bold text-[11px] md:text-[15px]">
             28 de junio de 2025
           </p>
         </div>

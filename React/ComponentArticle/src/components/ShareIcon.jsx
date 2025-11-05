@@ -7,7 +7,7 @@ import { ShareButton } from "./ShareButton";
 
 export const ShareIcon = () => {
   return (
-    <div className="flex justify-around items-center h-19  bg-Very-Dark-Grayish-Blue text-Light-Grayish-Blue absolute bottom-0 w-full "   >
+    <div className="flex justify-around items-center h-19  bg-Very-Dark-Grayish-Blue text-Light-Grayish-Blue absolute bottom-0 w-full  md:w-[250px]      md:right-[-47px] md:bottom-[71px] md:rounded-2xl  md:before:content-[''] md:before:absolute md:before:border-10 md:before:bottom-[-19px]  md:before:border-t-Very-Dark-Grayish-Blue   md:before:border-transparent  ">
       <div className="flex gap-5 tracking-[5px] ">
         <p className="uppercase ">share</p>
         <ul className="flex gap-3 text-[18px]">
@@ -29,7 +29,7 @@ export const ShareIcon = () => {
         </ul>
       </div>
 
-      <ShareButton />
+      <ShareButton style={"md:hidden"} />
     </div>
   );
 };

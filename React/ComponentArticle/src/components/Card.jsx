@@ -10,7 +10,7 @@ export const Card = () => {
   const {show} = useContext(ShowContext);
 
   return (
-    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden relative md:flex md:w-[700px]">
+    <div className="w-[345px]   m-auto  bg-Light-Grayish-Blue  rounded-2xl overflow-hidden relative md:flex md:w-[800px] md:overflow-visible">
       <ImgCard />
       <div className="px-6 pt-2 ">
         <p className="text-black/80 text-xl font-bold mb-4">
