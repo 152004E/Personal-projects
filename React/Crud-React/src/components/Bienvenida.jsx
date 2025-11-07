@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Boton } from "./Boton";
 export const Bienvenida = () => {
   return (
     <div className="absolute inset-0 flex justify-center items-center px-6">
@@ -7,12 +8,9 @@ export const Bienvenida = () => {
         <p className="text-white text-5xl text-center">
           ¿Deseas registrar un nuevo contacto?
         </p>
-        <Link
-          to="/registrar"
-          className="px-3 py-2 border text-xl text-white border-Desaturated-Dark-Blue rounded-xl  hover:bg-Very-Dark-Grayish-Blue/30 transition-all duration-500 hover:scale-[1.05] "
-        >
-          Ir a registrar
-        </Link>
+        
+        <Boton text={"Ir a registrar"} to={"/registrar"} />
+       
       </div>
     </div>
   );
