@@ -24,7 +24,7 @@ export const ListContact = () => {
           <tbody>
             {contactos.map((contacto) => {
               return (
-                <tr key={contacto.id} className="text-center">
+                <tr key={contacto.id} className="text-center hover:bg-Desaturated-Dark-Blue cursor-pointer duration-400">
                   <td className="border border-Very-Dark-Grayish-Blue">
                     {contacto.nombre}
                   </td>
