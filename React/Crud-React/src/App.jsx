@@ -1,15 +1,14 @@
-import { useState } from 'react'
-
-
-
+import { Bienvenida } from "./components/Bienvenida";
+import Threads from "./components/Threads";
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className='text-2xl text-amber-500'>nuevo pro</h1>
-    </>
-  )
+    <main className="">
+      <div className="relative w-full h-screen bg-black">
+        <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+        <Bienvenida/>
+      </div>
+    </main>
+  );
 }
 
-export default App
+export default App;
