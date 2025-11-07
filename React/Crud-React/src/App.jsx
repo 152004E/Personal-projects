@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Bienvenida } from "./components/Bienvenida";
 import Threads from "./components/Threads";
 import { Registar } from "./pages/Registar";
+import { ListContact } from "./pages/ListContact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Bienvenida />} />
           <Route path="/registrar" element={<Registar />} />
+          <Route path="/listContact" element={<ListContact />} />
 
         </Routes>
       </Router>
