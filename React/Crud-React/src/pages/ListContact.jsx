@@ -2,13 +2,18 @@ import { Boton } from "../components/Boton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export const ListContact = () => {
-  const [contactos, setContactos] = useState([
-    { id: 1, nombre: "paco", telefono: "12345" },
-    { id: 2, nombre: "maria", telefono: "67899" },
-    { id: 3, nombre: "angel", telefono: "246810" },
-  ]);
+  const [contactos, setContactos] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/contactos")
+      .then((res) => res.json())
+      .then((data) => setContactos(data))
+      .catch((error) => {
+        console.error("Error al encontrar los datos", error);
+      });
+  }, []);
 
   return (
     <div className="absolute inset-0 flex justify-center items-center px-6">
@@ -24,7 +29,10 @@ export const ListContact = () => {
           <tbody>
             {contactos.map((contacto) => {
               return (
-                <tr key={contacto.id} className="text-center hover:bg-Desaturated-Dark-Blue cursor-pointer duration-400">
+                <tr
+                  key={contacto.id}
+                  className="text-center hover:bg-Desaturated-Dark-Blue cursor-pointer duration-400"
+                >
                   <td className="border border-Very-Dark-Grayish-Blue">
                     {contacto.nombre}
                   </td>

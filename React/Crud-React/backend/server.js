@@ -4,11 +4,10 @@ import express from "express";
 //es para que no bloquee las peticiones
 import cors from "cors";
 //Es la libreria que conecta node.js con postgres
-import pkg from "pg";
+
+
 //sirve para las variables de entorno como el user la contraseña el puerto etc
 import dotenv from "dotenv";
-
-const {Pool} = pkg;
 
 //configuracion
 dotenv.config();
@@ -17,13 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 
-const pool = new Pool({
-    user: process.env.DB_USER,
-    host: process.env.DB_HOST,
-    password :process.env.DB_PASSWORD,
-    database:process.env.DB_NAME,
-    port : process.env.DB_PORT
-})
+
 
 
 app.get("/", (req, res) =>{
