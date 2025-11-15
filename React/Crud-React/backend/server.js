@@ -9,6 +9,10 @@ import cors from "cors";
 //sirve para las variables de entorno como el user la contraseña el puerto etc
 import dotenv from "dotenv";
 
+//importacion del pool
+
+import pool from "./db/conexion.js";
+
 //configuracion
 dotenv.config();
 const app = express();

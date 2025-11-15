@@ -42,7 +42,7 @@ export const Registar = () => {
               className="border border-Light-Grayish-Blue py-1 rounded-xl mb-4 text-white pl-8 "
               placeholder="Nombre de tu contacto"
               value={nombre}
-              onChange={(e)=> setNombre(e.target.value) }
+              onChange={(e) => setNombre(e.target.value)}
             />
           </div>
           <div className="flex flex-col w-[250px] relative">
@@ -63,14 +63,22 @@ export const Registar = () => {
             />
           </div>
 
-          <div className=" flex justify-center items-center gap-5">
+          <div className=" flex flex-col justify-center items-center gap-5">
+            <div className="flex  justify-center items-center gap-5">
+              <Boton
+                text={"Regresar"}
+                to="/"
+                icon={<FontAwesomeIcon icon={faArrowLeft} className="mr-1" />}
+              />
+              <Boton
+                text={"Registar"}
+                to={"/listContact"}
+                type="submit"
+                icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
+              />
+            </div>
             <Boton
-              text={"Regresar"}
-              to="/"
-              icon={<FontAwesomeIcon icon={faArrowLeft} className="mr-1" />}
-            />
-            <Boton
-              text={"Registar"}
+              text={"Ver contactos"}
               to={"/listContact"}
               type="submit"
               icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
