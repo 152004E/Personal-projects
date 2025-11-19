@@ -2,6 +2,8 @@ import { Boton } from "../components/Boton";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
+import { faEdit } from "@fortawesome/free-solid-svg-icons";
+import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
 export const ListContact = () => {
   const [contactos, setContactos] = useState([]);
@@ -24,6 +26,7 @@ export const ListContact = () => {
             <tr>
               <th className="border border-Very-Dark-Grayish-Blue">contacto</th>
               <th className="border border-Very-Dark-Grayish-Blue">Número</th>
+              <th className="border border-Very-Dark-Grayish-Blue">Opciones</th>
             </tr>
           </thead>
           <tbody>
@@ -39,6 +42,13 @@ export const ListContact = () => {
                   <td className="border border-Very-Dark-Grayish-Blue">
                     {contacto.telefono}
                   </td>
+                  <td className="border border-Very-Dark-Grayish-Blue">
+                    <button>
+                      <FontAwesomeIcon icon={faEdit} className="mr-1" />
+                      <FontAwesomeIcon icon={faTrash} className="mr-1" />
+                    </button>
+                  </td>
+                  
                 </tr>
               );
             })}

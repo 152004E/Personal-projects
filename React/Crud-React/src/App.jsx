@@ -11,14 +11,12 @@ function App() {
         <Threads amplitude={2} distance={0} enableMouseInteraction={true} />
       </div>
 
-      <Router>
         <Routes>
           <Route path="/" element={<Bienvenida />} />
           <Route path="/registrar" element={<Registar />} />
           <Route path="/listContact" element={<ListContact />} />
 
         </Routes>
-      </Router>
     </main>
   );
 }

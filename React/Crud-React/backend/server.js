@@ -8,10 +8,8 @@ import cors from "cors";
 
 //sirve para las variables de entorno como el user la contraseña el puerto etc
 import dotenv from "dotenv";
+import contactoRoute from "./routes/contactos.routes.js"
 
-//importacion del pool
-
-import pool from "./db/conexion.js";
 
 //configuracion
 dotenv.config();
@@ -19,8 +17,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+//esto es para que cuando se use el post se mande correctamente estos datos de convierten en objetos js 
+app.use(express.urlencoded({ extended: true })); 
 
 
+app.use("/contactos" , contactoRoute)
 
 
 app.get("/", (req, res) =>{
@@ -32,12 +33,3 @@ app.listen(PORT, ()=>{ console.log(`El servidor esta escuchando el puerto ${PORT
 console.log(process.env.DB_USER);
 
 
-app.get("/contactos" , async (req,res)=>{
-    try {
-        const result = await pool.query("select * from contactos")
-        res.json(result.rows)
-    } catch (error) {
-        console.error(error);
-        res.status(500).send("Error al obtener los contactos")
-    }
-})

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -11,12 +12,35 @@ import {
 
 import { Boton } from "../components/Boton";
 export const Registar = () => {
-  const [nombre, setNombre] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("nuevo contacto", { nombre, telefono });
-  };
+
+  const [nombre , setNombre] = useState("");
+  const [telefono , setTelefono] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) =>{
+      e.preventDefault();
+
+      try {
+
+        const res = await fetch("http://localhost:5000/contactos" , {
+          method : "POST",
+          headers : {
+            "Content-Type" :"application/json"
+          },
+          body : JSON.stringify({nombre,telefono})
+        });
+
+        if(!res.ok) throw new Error("Error al registrar el contacto")
+
+          alert("Contacto registrado exitosamente")
+          navigate("/listContact");
+      } catch (error) {
+        console.error(error)
+        alert("Hubo un error al registrar")
+        
+      }
+  }
+ 
 
   return (
     <div className="absolute inset-0 flex justify-center items-center px-6">
@@ -25,7 +49,8 @@ export const Registar = () => {
           Agrega tu nuevo Contacto.
         </h1>
         <form
-          action=""
+          method="POST"
+          action="http://localhost:5000/contactos"
           className="border border-Desaturated-Dark-Blue w-[300px] p-6 rounded-2xl flex flex-col justify-center items-center "
         >
           <div className="flex flex-col w-[250px] relative">
@@ -35,13 +60,15 @@ export const Registar = () => {
 
             <FontAwesomeIcon
               icon={faCircleUser}
-              className="text-Light-Grayish-Blue absolute bottom-6 left-2"
+              className="text-Light-Grayish-Blue absolute bottom-7 left-2 text-xl"
             />
             <input
               type="text"
-              className="border border-Light-Grayish-Blue py-1 rounded-xl mb-4 text-white pl-8 "
+              className="border border-Light-Grayish-Blue py-2 rounded-xl mb-4 text-white pl-9 text-[18px] "
               placeholder="Nombre de tu contacto"
+              name="nombre"
               value={nombre}
+              required
               onChange={(e) => setNombre(e.target.value)}
             />
           </div>
@@ -52,12 +79,14 @@ export const Registar = () => {
             </label>
             <FontAwesomeIcon
               icon={faMobile}
-              className="text-Light-Grayish-Blue absolute bottom-6 left-2"
+              className="text-Light-Grayish-Blue absolute bottom-7 left-2 text-xl"
             />
             <input
               type="number"
-              className="border border-Light-Grayish-Blue py-1 rounded-xl mb-4 text-white pl-8 "
+              className="border border-Light-Grayish-Blue py-2 rounded-xl mb-4 text-white pl-9  text-[18px] "
               placeholder="Numero de tu contacto"
+              name="telefono"
+              required
               value={telefono}
               onChange={(e) => setTelefono(e.target.value)}
             />
@@ -72,15 +101,15 @@ export const Registar = () => {
               />
               <Boton
                 text={"Registar"}
-                to={"/listContact"}
-                type="submit"
+                
+                 onClick={handleSubmit}
                 icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
               />
             </div>
             <Boton
               text={"Ver contactos"}
               to={"/listContact"}
-              type="submit"
+              
               icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
             />
           </div>
