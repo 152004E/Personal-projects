@@ -5,8 +5,11 @@ import { faUserPlus } from "@fortawesome/free-solid-svg-icons";
 import { faEdit } from "@fortawesome/free-solid-svg-icons";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { useState, useEffect } from "react";
+import { EditarContacto } from "../components/EditarContacto";
 export const ListContact = () => {
   const [contactos, setContactos] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [contactoSeleccionado, setContactoSeleccionado] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:5000/contactos")
@@ -18,7 +21,7 @@ export const ListContact = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 flex justify-center items-center px-6">
+    <div className="absolute inset-0 flex flex-col justify-center items-center px-6">
       <div className="flex flex-col gap-4 items-center justify-center bg-Very-Dark-Grayish-Blue/30 px-4 py-5 backdrop-blur-xs  rounded-2xl">
         <h1 className="text-white text-6xl text-center">tabla de contactos.</h1>
         <table className="border border-Very-Dark-Grayish-Blue  bg-Very-Dark-Grayish-Blue/50 w-full py-3 px-4  text-[21px] text-Light-Grayish-Blue">
@@ -34,7 +37,7 @@ export const ListContact = () => {
               return (
                 <tr
                   key={contacto.id}
-                  className="text-center hover:bg-Desaturated-Dark-Blue cursor-pointer duration-400"
+                  className="text-center hover:bg-Desaturated-Dark-Blue  duration-400"
                 >
                   <td className="border border-Very-Dark-Grayish-Blue">
                     {contacto.nombre}
@@ -43,12 +46,16 @@ export const ListContact = () => {
                     {contacto.telefono}
                   </td>
                   <td className="border border-Very-Dark-Grayish-Blue">
-                    <button>
+                    <button
+                      className="cursor-pointer"
+                      onClick={()=>{setModalOpen(true); setContactoSeleccionado(contacto)}}
+                    >
                       <FontAwesomeIcon icon={faEdit} className="mr-1" />
+                    </button>
+                    <button className="cursor-pointer">
                       <FontAwesomeIcon icon={faTrash} className="mr-1" />
                     </button>
                   </td>
-                  
                 </tr>
               );
             })}
@@ -68,6 +75,9 @@ export const ListContact = () => {
           />
         </div>
       </div>
+            
+              {modalOpen && <EditarContacto contactoSeleccionado={contactoSeleccionado} setModalOpen={setModalOpen}/>}
+            
     </div>
   );
 };

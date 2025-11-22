@@ -19,13 +19,28 @@ router.post("/", async (req, res) => {
 
     const result = await pool.query(
       "INSERT INTO contactos (nombre,telefono) VALUES ($1,$2 ) RETURNING *",
-      [
-        nombre, telefono]
+      [nombre, telefono]
     );
     res.json({ mensaje: "Contacto creado", contacto: result.rows[0] });
   } catch (error) {
     console.error(error);
     res.status(500).send("Error al guardar contactos");
+  }
+});
+
+router.put("/:id", async (req, res) => {
+  try {
+    const id = req.params.id
+    const { nombre, telefono } = req.body;
+    const result = await pool.query(
+      "UPDATE contactos set nombre = $1 , telefono = $2 where id = $3 RETURNING *",
+      [nombre, telefono , id]
+    );
+
+    res.json({ mensaje: "Contacto actualizado", contacto: result.rows[0] });
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error al actualizar el contacto");
   }
 });
 

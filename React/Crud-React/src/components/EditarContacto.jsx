@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowLeft,
@@ -9,12 +7,19 @@ import {
   faCircleUser,
   faMobile,
 } from "@fortawesome/free-solid-svg-icons";
-
 import { Boton } from "../components/Boton";
-export const Registar = () => {
-  const [nombre, setNombre] = useState("");
-  const [telefono, setTelefono] = useState("");
-  const navigate = useNavigate();
+import { useState , useEffect } from "react";
+export const EditarContacto = ({contactoSeleccionado,setModalOpen}) => {
+
+    const [nombre, setNombre] = useState("");
+const [telefono, setTelefono] = useState("");
+
+    useEffect(()=>{
+        if (contactoSeleccionado) {
+            setNombre(contactoSeleccionado.nombre)
+            setTelefono(contactoSeleccionado.telefono)
+        }
+    },[contactoSeleccionado])
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -26,29 +31,28 @@ export const Registar = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/contactos", {
-        method: "POST",
+      const res = await fetch(`http://localhost:5000/contactos/${contactoSeleccionado.id}`, {
+        method: "PUT",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({ nombre: nombreMayus, telefono }),
       });
 
-      if (!res.ok) throw new Error("Error al registrar el contacto");
+      if (!res.ok) throw new Error("Error al actualizar el contacto");
 
-      alert("Contacto registrado exitosamente");
-      navigate("/listContact");
+      alert("Contacto Actualizado exitosamente");
+      setModalOpen(false)
+      
     } catch (error) {
       console.error(error);
-      alert("Hubo un error al registrar");
+      alert("Hubo un error al actualizar");
     }
   };
-
   return (
-    <div className="absolute inset-0 flex justify-center items-center px-6">
-      <div className="flex flex-col gap-4 items-center justify-center bg-Very-Dark-Grayish-Blue/30 px-4 py-5 backdrop-blur-xs  rounded-2xl">
+    <div className="absolute flex flex-col gap-4 items-center justify-center bg-Very-Dark-Grayish-Blue/30 px-4 py-5 backdrop-blur-xs  rounded-2xl">
         <h1 className="text-white text-5xl text-center">
-          Agrega tu nuevo Contacto.
+          Editar Contacto
         </h1>
         <form
           onSubmit={handleSubmit}
@@ -68,9 +72,9 @@ export const Registar = () => {
               className="border border-Light-Grayish-Blue py-2 rounded-xl mb-4 text-white pl-9 text-[18px]"
               placeholder="Nombre de tu contacto"
               name="nombre"
-              value={nombre}
+            value={nombre}
+            onChange={(e)=> setNombre(e.target.value)}
               required
-              onChange={(e) => setNombre(e.target.value)}
             />
           </div>
           <div className="flex flex-col w-[250px] relative">
@@ -87,33 +91,29 @@ export const Registar = () => {
               className="border border-Light-Grayish-Blue py-2 rounded-xl mb-4 text-white pl-9  text-[18px] "
               placeholder="Numero de tu contacto"
               name="telefono"
-              required
               value={telefono}
-              onChange={(e) => setTelefono(e.target.value)}
+            onChange={(e)=> setTelefono(e.target.value)}
+              required
             />
           </div>
 
           <div className=" flex flex-col justify-center items-center gap-5">
             <div className="flex  justify-center items-center gap-2">
               <Boton
-                text={"Regresar"}
-                to="/"
+                text={"Cancelar"}
+                onClick={()=> {setModalOpen(false)}}
                 icon={<FontAwesomeIcon icon={faArrowLeft} className="mr-1" />}
               />
               <Boton
-                text="Registrar"
+                text="Actualizar"
                 type="submit"
                 icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
               />
             </div>
-            <Boton
-              text={"Ver contactos"}
-              to={"/listContact"}
-              icon={<FontAwesomeIcon icon={faUserPlus} className="mr-1" />}
-            />
+            
           </div>
         </form>
       </div>
-    </div>
-  );
-};
+  )
+}
+
