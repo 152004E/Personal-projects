@@ -20,6 +20,33 @@ export const ListContact = () => {
       });
   }, []);
 
+  const refrescarContactos = () => {
+    fetch("http://localhost:5000/contactos")
+      .then((res) => res.json())
+      .then((data) => setContactos(data))
+      .catch((error) => {
+        console.error("Error al encontrar los datos", error);
+      });
+  };
+
+  const eliminarContacto = async (id) => {
+    let respuesta = confirm("¿Seguro que deseas eliminar?");
+    if (respuesta == true) {
+      try {
+        const res = await fetch(`http://localhost:5000/contactos/${id}`, {
+          method: "DELETE",
+        });
+
+        if (!res.ok) throw new Error("Error al Eliminar el contacto");
+
+        refrescarContactos();
+      } catch (error) {
+        console.error(error);
+        alert("Hubo un error al Eliminar el contacto");
+      }
+    }
+  };
+
   return (
     <div className="absolute inset-0 flex flex-col justify-center items-center px-6">
       <div className="flex flex-col gap-4 items-center justify-center bg-Very-Dark-Grayish-Blue/30 px-4 py-5 backdrop-blur-xs  rounded-2xl">
@@ -48,11 +75,19 @@ export const ListContact = () => {
                   <td className="border border-Very-Dark-Grayish-Blue">
                     <button
                       className="cursor-pointer"
-                      onClick={()=>{setModalOpen(true); setContactoSeleccionado(contacto)}}
+                      onClick={() => {
+                        setModalOpen(true);
+                        setContactoSeleccionado(contacto);
+                      }}
                     >
                       <FontAwesomeIcon icon={faEdit} className="mr-1" />
                     </button>
-                    <button className="cursor-pointer">
+                    <button
+                      className="cursor-pointer"
+                      onClick={() => {
+                        eliminarContacto(contacto.id);
+                      }}
+                    >
                       <FontAwesomeIcon icon={faTrash} className="mr-1" />
                     </button>
                   </td>
@@ -75,9 +110,14 @@ export const ListContact = () => {
           />
         </div>
       </div>
-            
-              {modalOpen && <EditarContacto contactoSeleccionado={contactoSeleccionado} setModalOpen={setModalOpen}/>}
-            
+
+      {modalOpen && (
+        <EditarContacto
+          contactoSeleccionado={contactoSeleccionado}
+          setModalOpen={setModalOpen}
+          refrescarContactos={refrescarContactos}
+        />
+      )}
     </div>
   );
 };

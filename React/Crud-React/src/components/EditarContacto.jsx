@@ -9,7 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Boton } from "../components/Boton";
 import { useState , useEffect } from "react";
-export const EditarContacto = ({contactoSeleccionado,setModalOpen}) => {
+export const EditarContacto = ({contactoSeleccionado,setModalOpen , refrescarContactos}) => {
 
     const [nombre, setNombre] = useState("");
 const [telefono, setTelefono] = useState("");
@@ -43,6 +43,7 @@ const [telefono, setTelefono] = useState("");
 
       alert("Contacto Actualizado exitosamente");
       setModalOpen(false)
+      refrescarContactos();
       
     } catch (error) {
       console.error(error);

@@ -44,4 +44,21 @@ router.put("/:id", async (req, res) => {
   }
 });
 
+
+router.delete("/:id", async (req, res) =>{
+  try {
+    const id = req.params.id
+    const result = await pool.query(
+      "DELETE FROM contactos WHERE id = $1",
+      [id] 
+    )
+    res.json({manseje : "Contacto eliminado" })
+    
+  } catch (error) {
+    console.log(error)
+    res.status(500).send("No se pudo eliminar el contacto")
+  }
+
+})
+
 export default router;
