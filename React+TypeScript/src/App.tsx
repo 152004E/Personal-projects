@@ -1,11 +1,10 @@
+import { Myrutes } from "./routes/router"
 
 
 function App() {
 
   return (
-    <main>
-      hola munfo
-    </main>
+    <Myrutes/>
   )
 }
 
